@@ -1,0 +1,121 @@
+{
+  "latency": {
+    "P": 3722088066304.263,
+    "BW": 239943701125.18408,
+    "t_kernel": 6.0369939893129915e-06,
+    "t_launch": 3.371621702579895e-05
+  },
+  "energy": {
+    "P_static": 45.32356299725598,
+    "e_flop": 0.0,
+    "e_byte": 2.9597971221783143e-10,
+    "latency": {
+      "P": 3722088066304.263,
+      "BW": 239943701125.18408,
+      "t_kernel": 6.0369939893129915e-06,
+      "t_launch": 3.371621702579895e-05
+    }
+  },
+  "metrics": {
+    "train": {
+      "memory": {
+        "mape": 0.17230501071615342,
+        "median_ape": 0.14869998578827878,
+        "max_ape": 0.6853305683108675,
+        "n": 63
+      },
+      "latency": {
+        "mape": 0.12088409027456935,
+        "median_ape": 0.07619497662551944,
+        "max_ape": 0.5904260355359403,
+        "n": 63
+      },
+      "energy": {
+        "mape": 0.15027054224599729,
+        "median_ape": 0.13711822301695245,
+        "max_ape": 0.6099540881581234,
+        "n": 63
+      },
+      "flops_matmul_vs_torch_counter": {
+        "mape": 0.0,
+        "median_ape": 0.0,
+        "max_ape": 0.0,
+        "n": 63
+      }
+    },
+    "validation": {
+      "memory": {
+        "mape": 0.22034913315551966,
+        "median_ape": 0.19554149493857534,
+        "max_ape": 0.6458237796575492,
+        "n": 69
+      },
+      "latency": {
+        "mape": 0.2112824478907688,
+        "median_ape": 0.24336255107617957,
+        "max_ape": 0.6038728565772767,
+        "n": 69
+      },
+      "energy": {
+        "mape": 0.21014002697702336,
+        "median_ape": 0.20781041848036272,
+        "max_ape": 0.6099513984389754,
+        "n": 69
+      },
+      "flops_matmul_vs_torch_counter": {
+        "mape": 0.0,
+        "median_ape": 0.0,
+        "max_ape": 0.0,
+        "n": 69
+      }
+    },
+    "all": {
+      "memory": {
+        "mape": 0.1974189838094585,
+        "median_ape": 0.17121423722622686,
+        "max_ape": 0.6853305683108675,
+        "n": 132
+      },
+      "latency": {
+        "mape": 0.16813777721030998,
+        "median_ape": 0.13422178153155262,
+        "max_ape": 0.6038728565772767,
+        "n": 132
+      },
+      "energy": {
+        "mape": 0.18156595471903367,
+        "median_ape": 0.17497616031287078,
+        "max_ape": 0.6099540881581234,
+        "n": 132
+      },
+      "flops_matmul_vs_torch_counter": {
+        "mape": 0.0,
+        "median_ape": 0.0,
+        "max_ape": 0.0,
+        "n": 132
+      }
+    },
+    "regime_counts": {
+      "launch": 30,
+      "memory": 0,
+      "compute": 102
+    },
+    "latency_mape_launch": 0.10348984630730113,
+    "latency_mape_compute": 0.18715187453472432,
+    "memory_constant_check": {
+      "measured_baseline_minus_input_bytes_median": 13755392.0,
+      "assumed_weights_plus_cublas_bytes": 12706816.0
+    },
+    "oom": {
+      "measured": 0,
+      "predicted": 0,
+      "agree": 132,
+      "total": 132
+    },
+    "P_fit_over_gemm_peak": 0.8830430591035885
+  },
+  "fixed_from_microbench": [
+    "BW"
+  ],
+  "model": "T=max(N_ops*t_launch, sum_l max(F_l/P, M_l/BW) + N_k*t_kernel); E=P_static*T + e_flop*F + e_byte*M"
+}

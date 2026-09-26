@@ -1,0 +1,53 @@
+{
+  "gpu": "Tesla T4",
+  "gpu_total_memory_bytes": 15637086208,
+  "sm_count": 40,
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91900,
+  "python": "3.13.15",
+  "driver": "580.82.07",
+  "energy_method": "nvml_total_energy_counter",
+  "seed": 2026,
+  "sizes": [
+    32,
+    48,
+    64,
+    112,
+    128,
+    224,
+    256,
+    352,
+    384,
+    400,
+    512
+  ],
+  "batches": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    95,
+    98,
+    128,
+    167,
+    256
+  ],
+  "s_random": [
+    48,
+    112,
+    352,
+    400
+  ],
+  "b_random": [
+    95,
+    98,
+    167
+  ],
+  "use_bn": true,
+  "bw_copy_bytes_per_s": 239943701125.18408,
+  "gemm_fp32_flops_per_s": 4215069727270.9443
+}
